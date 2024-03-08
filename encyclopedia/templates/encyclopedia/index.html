@@ -1,0 +1,49 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block extra_css %}
+    <style>
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .delete-form {
+            display: flex;
+            align-items: center;
+        }
+        
+        .delete-form button {
+            margin-left: 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 col-md-8 col-sm-6 main py-4">
+                <h1>All Pages</h1>
+
+                <ul class="list-group">
+                    {% for entry in entries %}
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        <div>
+                            <a href="{% url 'entry' entry %}" style="text-decoration: none;">{{ entry }}</a>
+                        </div>
+                        <form method="post" class="delete-form" action="{% url 'delete_entry' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="entry_title" value="{{ entry }}">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

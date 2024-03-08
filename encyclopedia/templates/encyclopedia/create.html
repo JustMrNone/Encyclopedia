@@ -1,0 +1,33 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create New Page
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-lg-9 col-md-8 col-sm-6 main py-4">
+                <h1>Create New Page</h1>
+
+                <form action="{% url 'create' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="content" class="form-label">Content</label>
+                        <textarea class="form-control" id="content" name="content" rows="10"
+                                  placeholder="Write page content in markdown"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    {% if error %}
+                    <div class="alert alert-danger" role="alert">{{ error }}</div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 col-md-8 col-sm-6 main py-4">
+                <h1>Related Pages: </h1>
+                <ul class="list-group">
+                    {% for entry in entries %}
+                        <a href="{% url 'entry' entry %}" class="list-group-item list-group-item-action">
+                            {{ entry }}
+                        </a>
+                    {% empty %}
+                        <li class="list-group-item">No matching results!</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

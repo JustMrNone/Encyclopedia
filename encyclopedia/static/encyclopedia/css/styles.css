@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    background-color: #f8f9fa; /* Subtle grayish background */
+    font-family: Arial, sans-serif; /* Use a common font family */
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0;
+    padding-top: 20px;
+    font-size: 36px; /* Larger font size for headings */
+    color: #333; /* Darker text color */
+}
+
+textarea {
+    height: 70vh; /* Reduced height */
+    width: 80%;
+    padding: 10px; /* Added padding for better spacing */
+    font-size: 16px; /* Increased font size for better readability */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.main {
+    padding: 20px; /* Increased padding for better spacing */
+}
+
+.search {
+    width: 100%;
+    font-size: 18px; /* Slightly larger font size */
+    padding: 10px; /* Added padding for better spacing */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 24px; /* Larger font size for headings */
+    color: #333; /* Darker text color */
+}
+body {
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.sidebar h2 {
+    color: #0056b3;
+}
+
+.main {
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.nav-link {
+    color: #0056b3;
+    font-weight: bold;
+}
+nav-link:hover{
+    color: #a81064
+}
