@@ -11,9 +11,6 @@
 - Whether you're looking to gather information or want to share your knowledge, this Markdown Encyclopedia provides a convenient platform for you to do so.
 
 ## requirements
-python3
-django
-markdown
 
 ```bash
 pip install django
