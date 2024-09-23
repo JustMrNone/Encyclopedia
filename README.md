@@ -3,7 +3,7 @@ Markdown Encyclopedia
 
 <div align="center"> 
   <a href="https://justmrnone.github.io/NeverEndingPong/repersentation/wiki.png"> 
-    <img src="https://justmrnone.github.io/NeverEndingPong/repersentation/wiki.png" width="80%" alt="Markdown Encyclopedia"> 
+    <img src="https://justmrnone.github.io/NeverEndingPong/repersentation/wiki.png" width="90%" alt="Markdown Encyclopedia"> 
   </a> 
 </div>
 
